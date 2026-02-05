@@ -18,4 +18,4 @@ logging.basicConfig(
     ]
 )
 
-logging = logging.getLogger("datasciencelogger")
+logger = logging.getLogger("datasciencelogger")
