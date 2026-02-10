@@ -321,3 +321,34 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_validati
 [2026-02-06 18:32:37,102: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
 
 ====]
+[2026-02-10 15:36:47,413: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 15:36:47,415: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 15:36:47,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 15:36:47,447: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 15:36:47,449: INFO: common: created directory at: artifcats]
+[2026-02-10 15:36:47,449: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 15:36:47,449: INFO: data_ingestion: File already exists]
+[2026-02-10 15:36:47,476: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 15:36:47,477: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 15:36:47,483: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 15:36:47,486: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 15:36:47,490: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 15:36:47,491: INFO: common: created directory at: artifcats]
+[2026-02-10 15:36:47,493: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 15:36:47,528: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 15:36:47,528: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 15:36:47,534: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 15:36:47,536: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 15:36:47,543: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 15:36:47,544: INFO: common: created directory at: artifcats]
+[2026-02-10 15:36:47,548: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 15:36:47,573: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 15:36:47,573: INFO: data_transformation: (1199, 12)]
+[2026-02-10 15:36:47,574: INFO: data_transformation: (400, 12)]
+[2026-02-10 15:36:47,575: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
