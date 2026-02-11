@@ -352,3 +352,871 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_validati
 [2026-02-10 15:36:47,575: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
 
 ======]
+[2026-02-10 17:33:08,849: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 17:33:08,905: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:33:08,915: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:33:08,920: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:33:08,922: INFO: common: created directory at: artifcats]
+[2026-02-10 17:33:08,923: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 17:33:08,924: INFO: data_ingestion: File already exists]
+[2026-02-10 17:33:08,934: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 17:33:08,935: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 17:33:08,939: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:33:08,941: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:33:08,944: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:33:08,945: INFO: common: created directory at: artifcats]
+[2026-02-10 17:33:08,946: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 17:33:08,984: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 17:33:08,984: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 17:33:09,004: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:33:09,005: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:33:09,006: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:33:09,006: INFO: common: created directory at: artifcats]
+[2026-02-10 17:33:09,006: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 17:33:09,037: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 17:33:09,037: INFO: data_transformation: (1199, 12)]
+[2026-02-10 17:33:09,037: INFO: data_transformation: (400, 12)]
+[2026-02-10 17:33:09,037: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-10 17:33:09,037: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-10 17:33:09,043: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:33:09,043: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:33:09,047: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:33:09,047: INFO: common: created directory at: artifcats]
+[2026-02-10 17:33:09,048: ERROR: main: "'ConfigBox' object has no attribute 'target_column'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'target_column'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 46, in <module>
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "D:\projects\Datascienceproject\src\datascience\config\configuration.py", line 60, in get_model_trainer_config
+    schema = self.config.TARGET_COLUMN
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'target_column'"
+[2026-02-10 17:35:35,772: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 17:35:35,772: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:35:35,772: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:35:35,772: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:35:35,772: INFO: common: created directory at: artifcats]
+[2026-02-10 17:35:35,780: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 17:35:35,780: INFO: data_ingestion: File already exists]
+[2026-02-10 17:35:35,784: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 17:35:35,784: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 17:35:35,788: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:35:35,790: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:35:35,793: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:35:35,793: INFO: common: created directory at: artifcats]
+[2026-02-10 17:35:35,793: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 17:35:35,835: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 17:35:35,835: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 17:35:35,848: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:35:35,852: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:35:35,855: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:35:35,856: INFO: common: created directory at: artifcats]
+[2026-02-10 17:35:35,857: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 17:35:35,884: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 17:35:35,884: INFO: data_transformation: (1199, 12)]
+[2026-02-10 17:35:35,885: INFO: data_transformation: (400, 12)]
+[2026-02-10 17:35:35,885: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-10 17:35:35,885: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-10 17:35:35,888: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:35:35,889: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:35:35,891: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:35:35,892: INFO: common: created directory at: artifcats]
+[2026-02-10 17:35:35,892: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-10 17:35:35,893: ERROR: main: "'ConfigBox' object has no attribute 'model_name'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 46, in <module>
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "D:\projects\Datascienceproject\src\datascience\config\configuration.py", line 68, in get_model_trainer_config
+    model_name= config.model_name,
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_name'"
+[2026-02-10 17:37:11,079: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 17:37:11,084: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:37:11,087: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:37:11,089: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:37:11,090: INFO: common: created directory at: artifcats]
+[2026-02-10 17:37:11,090: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 17:37:11,090: INFO: data_ingestion: File already exists]
+[2026-02-10 17:37:11,095: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 17:37:11,096: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 17:37:11,099: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:37:11,100: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:37:11,104: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:37:11,105: INFO: common: created directory at: artifcats]
+[2026-02-10 17:37:11,105: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 17:37:11,156: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 17:37:11,156: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 17:37:11,163: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:37:11,165: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:37:11,179: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:37:11,179: INFO: common: created directory at: artifcats]
+[2026-02-10 17:37:11,184: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 17:37:11,235: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 17:37:11,235: INFO: data_transformation: (1199, 12)]
+[2026-02-10 17:37:11,236: INFO: data_transformation: (400, 12)]
+[2026-02-10 17:37:11,236: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-10 17:37:11,237: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-10 17:37:11,242: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:37:11,244: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:37:11,248: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:37:11,250: INFO: common: created directory at: artifcats]
+[2026-02-10 17:37:11,250: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-10 17:37:11,322: ERROR: main: The 'alphas' parameter of ElasticNetCV must be an int in the range [1, inf), an array-like or None. Got 0.2 instead.]
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 46, in <module>
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_trainer
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_trainer.py", line 24, in initiate_model_trainer
+    lr.fit(train_x,train_y)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\sklearn\linear_model\_coordinate_descent.py", line 2480, in fit
+    return super().fit(X, y, sample_weight=sample_weight, **params)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\sklearn\base.py", line 1358, in wrapper
+    estimator._validate_params()
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\sklearn\base.py", line 471, in _validate_params
+    validate_parameter_constraints(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\sklearn\utils\_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'alphas' parameter of ElasticNetCV must be an int in the range [1, inf), an array-like or None. Got 0.2 instead.
+[2026-02-10 17:38:55,641: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 17:38:55,644: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:38:55,644: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:38:55,644: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:38:55,644: INFO: common: created directory at: artifcats]
+[2026-02-10 17:38:55,650: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 17:38:55,651: INFO: data_ingestion: File already exists]
+[2026-02-10 17:38:55,653: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 17:38:55,654: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 17:38:55,657: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:38:55,658: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:38:55,659: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:38:55,661: INFO: common: created directory at: artifcats]
+[2026-02-10 17:38:55,661: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 17:38:55,702: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 17:38:55,709: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 17:38:55,713: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:38:55,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:38:55,718: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:38:55,720: INFO: common: created directory at: artifcats]
+[2026-02-10 17:38:55,720: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 17:38:55,752: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 17:38:55,753: INFO: data_transformation: (1199, 12)]
+[2026-02-10 17:38:55,753: INFO: data_transformation: (400, 12)]
+[2026-02-10 17:38:55,754: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-10 17:38:55,754: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-10 17:38:55,757: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:38:55,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:38:55,760: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:38:55,761: INFO: common: created directory at: artifcats]
+[2026-02-10 17:38:55,762: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-10 17:38:55,866: ERROR: main: ElasticNetCV.__init__() got an unexpected keyword argument 'alpha']
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 46, in <module>
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_trainer
+    model_trainer.initiate_model_trainer()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_trainer.py", line 17, in initiate_model_trainer
+    lr = ElasticNetCV(alpha=self.config.alpha,l1_ratio=self.config.l1_ratio, random_state=101)
+TypeError: ElasticNetCV.__init__() got an unexpected keyword argument 'alpha'
+[2026-02-10 17:39:38,523: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-10 17:39:38,532: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:39:38,532: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:39:38,532: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:39:38,532: INFO: common: created directory at: artifcats]
+[2026-02-10 17:39:38,532: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-10 17:39:38,537: INFO: data_ingestion: File already exists]
+[2026-02-10 17:39:38,541: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-10 17:39:38,541: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-10 17:39:38,545: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:39:38,545: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:39:38,547: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:39:38,547: INFO: common: created directory at: artifcats]
+[2026-02-10 17:39:38,550: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-10 17:39:38,590: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-10 17:39:38,591: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-10 17:39:38,596: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:39:38,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:39:38,601: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:39:38,602: INFO: common: created directory at: artifcats]
+[2026-02-10 17:39:38,603: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-10 17:39:38,622: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-10 17:39:38,623: INFO: data_transformation: (1199, 12)]
+[2026-02-10 17:39:38,623: INFO: data_transformation: (400, 12)]
+[2026-02-10 17:39:38,623: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-10 17:39:38,624: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-10 17:39:38,626: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-10 17:39:38,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-10 17:39:38,630: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-10 17:39:38,631: INFO: common: created directory at: artifcats]
+[2026-02-10 17:39:38,631: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-10 17:39:38,765: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:08:56,353: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:08:56,383: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:08:56,389: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:08:56,391: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:08:56,393: INFO: common: created directory at: artifcats]
+[2026-02-11 14:08:56,393: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:08:56,394: INFO: data_ingestion: File already exists]
+[2026-02-11 14:08:56,435: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:08:56,436: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:08:56,442: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:08:56,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:08:56,449: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:08:56,450: INFO: common: created directory at: artifcats]
+[2026-02-11 14:08:56,451: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:08:56,498: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:08:56,498: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:08:56,534: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:08:56,535: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:08:56,538: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:08:56,538: INFO: common: created directory at: artifcats]
+[2026-02-11 14:08:56,539: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:08:56,569: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:08:56,569: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:08:56,570: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:08:56,571: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:08:56,571: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:08:56,574: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:08:56,576: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:08:56,578: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:08:56,579: INFO: common: created directory at: artifcats]
+[2026-02-11 14:08:56,580: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:08:56,668: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:08:56,668: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:08:56,679: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:08:56,687: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:08:56,701: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:08:56,708: INFO: common: created directory at: artifcats]
+[2026-02-11 14:08:56,709: ERROR: main: "'ConfigBox' object has no attribute 'target_column'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'target_column'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "D:\projects\Datascienceproject\src\datascience\config\configuration.py", line 79, in get_model_evaluation_config
+    params = self.params.TARGET_COLUMN
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'target_column'"
+[2026-02-11 14:10:31,507: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:10:31,511: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:10:31,512: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:10:31,514: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:10:31,515: INFO: common: created directory at: artifcats]
+[2026-02-11 14:10:31,516: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:10:31,516: INFO: data_ingestion: File already exists]
+[2026-02-11 14:10:31,520: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:10:31,521: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:10:31,525: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:10:31,527: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:10:31,529: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:10:31,531: INFO: common: created directory at: artifcats]
+[2026-02-11 14:10:31,532: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:10:31,573: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:10:31,574: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:10:31,584: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:10:31,586: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:10:31,589: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:10:31,592: INFO: common: created directory at: artifcats]
+[2026-02-11 14:10:31,593: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:10:31,615: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:10:31,615: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:10:31,615: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:10:31,616: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:10:31,617: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:10:31,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:10:31,624: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:10:31,626: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:10:31,627: INFO: common: created directory at: artifcats]
+[2026-02-11 14:10:31,628: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:10:31,744: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:10:31,745: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:10:31,775: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:10:31,779: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:10:31,785: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:10:31,786: INFO: common: created directory at: artifcats]
+[2026-02-11 14:10:31,786: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:10:31,829: ERROR: main: module 'mlflow' has no attribute 'get_tracking_url']
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 34, in log_into_mlflow
+    tracking_url_type_store = urlparse(mlflow.get_tracking_url()).scheme
+AttributeError: module 'mlflow' has no attribute 'get_tracking_url'. Did you mean: 'get_tracking_uri'?
+[2026-02-11 14:11:14,827: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:11:14,831: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:14,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:14,835: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:14,836: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:14,839: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:11:14,839: INFO: data_ingestion: File already exists]
+[2026-02-11 14:11:14,842: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:11:14,842: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:11:14,846: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:14,848: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:14,850: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:14,851: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:14,852: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:11:14,885: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:11:14,885: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:11:14,891: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:14,892: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:14,895: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:14,896: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:14,897: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:11:14,917: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:11:14,918: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:11:14,918: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:11:14,918: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:11:14,919: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:11:14,923: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:14,925: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:14,927: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:14,927: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:14,928: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:11:15,085: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:11:15,086: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:11:15,092: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:15,094: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:15,099: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:15,100: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:15,100: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:11:15,149: ERROR: main: module 'mlflow' has no attribute 'get_tracking_urI']
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 34, in log_into_mlflow
+    tracking_url_type_store = urlparse(mlflow.get_tracking_urI()).scheme
+AttributeError: module 'mlflow' has no attribute 'get_tracking_urI'. Did you mean: 'get_tracking_uri'?
+[2026-02-11 14:11:57,453: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:11:57,456: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:57,457: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:57,459: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:57,460: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:57,460: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:11:57,462: INFO: data_ingestion: File already exists]
+[2026-02-11 14:11:57,465: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:11:57,466: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:11:57,469: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:57,470: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:57,474: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:57,475: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:57,476: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:11:57,508: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:11:57,508: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:11:57,513: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:57,515: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:57,518: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:57,518: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:57,518: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:11:57,541: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:11:57,541: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:11:57,541: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:11:57,542: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:11:57,542: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:11:57,545: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:57,547: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:57,549: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:57,550: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:57,551: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:11:57,678: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:11:57,680: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:11:57,683: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:11:57,685: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:11:57,687: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:11:57,688: INFO: common: created directory at: artifcats]
+[2026-02-11 14:11:57,689: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:12:02,563: ERROR: main: cannot unpack non-iterable NoneType object]
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 40, in log_into_mlflow
+    (rmse,mae,r2) = self.eval_metrics(test_y,predictions)
+TypeError: cannot unpack non-iterable NoneType object
+[2026-02-11 14:12:51,290: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:12:51,293: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:12:51,294: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:12:51,296: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:12:51,297: INFO: common: created directory at: artifcats]
+[2026-02-11 14:12:51,298: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:12:51,298: INFO: data_ingestion: File already exists]
+[2026-02-11 14:12:51,302: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:12:51,302: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:12:51,306: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:12:51,308: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:12:51,310: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:12:51,310: INFO: common: created directory at: artifcats]
+[2026-02-11 14:12:51,311: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:12:51,351: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:12:51,351: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:12:51,356: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:12:51,357: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:12:51,360: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:12:51,361: INFO: common: created directory at: artifcats]
+[2026-02-11 14:12:51,362: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:12:51,384: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:12:51,385: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:12:51,385: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:12:51,386: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:12:51,386: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:12:51,389: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:12:51,391: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:12:51,393: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:12:51,394: INFO: common: created directory at: artifcats]
+[2026-02-11 14:12:51,395: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:12:51,517: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:12:51,518: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:12:51,538: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:12:51,548: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:12:51,552: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:12:51,555: INFO: common: created directory at: artifcats]
+[2026-02-11 14:12:51,560: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:12:53,094: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 14:13:07,755: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 55, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 466, in log_model
+    return Model.log(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\models\model.py", line 1357, in log
+    registered_model = mlflow.tracking._model_registry.fluent._register_model(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 167, in _register_model
+    raise e
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 156, in _register_model
+    create_model_response = client.create_registered_model(name)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\client.py", line 3880, in create_registered_model
+    return self._get_registry_client().create_registered_model(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\telemetry\track.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 96, in create_registered_model
+    return self.store.create_registered_model(name, tags, description, deployment_job_id)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\rest_store.py", line 110, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 596, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 321, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2026-02-11 14:22:11,040: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:22:11,043: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:22:11,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:22:11,046: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:22:11,047: INFO: common: created directory at: artifcats]
+[2026-02-11 14:22:11,048: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:22:11,048: INFO: data_ingestion: File already exists]
+[2026-02-11 14:22:11,052: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:22:11,053: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:22:11,059: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:22:11,060: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:22:11,064: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:22:11,065: INFO: common: created directory at: artifcats]
+[2026-02-11 14:22:11,065: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:22:11,098: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:22:11,099: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:22:11,113: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:22:11,115: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:22:11,117: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:22:11,118: INFO: common: created directory at: artifcats]
+[2026-02-11 14:22:11,118: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:22:11,147: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:22:11,149: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:22:11,149: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:22:11,149: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:22:11,150: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:22:11,153: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:22:11,154: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:22:11,157: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:22:11,158: INFO: common: created directory at: artifcats]
+[2026-02-11 14:22:11,158: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:22:11,252: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:22:11,252: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:22:11,256: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:22:11,259: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:22:11,262: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:22:11,263: INFO: common: created directory at: artifcats]
+[2026-02-11 14:22:11,264: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:22:12,817: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 14:22:19,095: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 62, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 466, in log_model
+    return Model.log(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\models\model.py", line 1357, in log
+    registered_model = mlflow.tracking._model_registry.fluent._register_model(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 167, in _register_model
+    raise e
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 156, in _register_model
+    create_model_response = client.create_registered_model(name)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\client.py", line 3880, in create_registered_model
+    return self._get_registry_client().create_registered_model(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\telemetry\track.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 96, in create_registered_model
+    return self.store.create_registered_model(name, tags, description, deployment_job_id)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\rest_store.py", line 110, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 596, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 321, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2026-02-11 14:28:55,230: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-02-11 14:28:55,235: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:28:55,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:28:55,237: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:28:55,238: INFO: common: created directory at: artifcats]
+[2026-02-11 14:28:55,238: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 14:28:55,238: INFO: data_ingestion: File already exists]
+[2026-02-11 14:28:55,241: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+========x]
+[2026-02-11 14:28:55,241: INFO: main: >>>>>>> Data Validation Stage started <<<<<<]
+[2026-02-11 14:28:55,245: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:28:55,248: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:28:55,251: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:28:55,252: INFO: common: created directory at: artifcats]
+[2026-02-11 14:28:55,252: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 14:28:55,288: INFO: main: >>>>>>> Data Validation Stage completed <<<<<<<
+
+====]
+[2026-02-11 14:28:55,289: INFO: main: >>>>>>> Data Transformation Stage started <<<<<<]
+[2026-02-11 14:28:55,314: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:28:55,318: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:28:55,325: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:28:55,326: INFO: common: created directory at: artifcats]
+[2026-02-11 14:28:55,327: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 14:28:55,352: INFO: data_transformation: Spliting the data into train and test sets]
+[2026-02-11 14:28:55,352: INFO: data_transformation: (1199, 12)]
+[2026-02-11 14:28:55,353: INFO: data_transformation: (400, 12)]
+[2026-02-11 14:28:55,353: INFO: main: >>>>>>  Data Transformation Stage ended <<<<<<<
+
+======]
+[2026-02-11 14:28:55,354: INFO: main: >>>>>>  Model Training Stage started <<<<<<]
+[2026-02-11 14:28:55,358: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:28:55,359: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:28:55,361: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:28:55,361: INFO: common: created directory at: artifcats]
+[2026-02-11 14:28:55,362: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 14:28:55,442: INFO: main: >>>>>> Model Training Stage completed <<<<<<
+
+
+========]
+[2026-02-11 14:28:55,442: INFO: main: >>>>> Model Evaluation Stage started <<<<<<]
+[2026-02-11 14:28:55,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 14:28:55,451: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 14:28:55,456: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 14:28:55,457: INFO: common: created directory at: artifcats]
+[2026-02-11 14:28:55,458: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 14:28:57,005: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 14:33:11,363: ERROR: main: API request to https://dagshub.com/upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create (Caused by ResponseError('too many 500 error responses'))]
+urllib3.exceptions.ResponseError: too many 500 error responses
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\urllib3\connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+  [Previous line repeated 4 more times]
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\urllib3\connectionpool.py", line 932, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 236, in http_request
+    return _get_http_response_with_retries(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\request_utils.py", line 237, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\requests\adapters.py", line 668, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\Datascienceproject\main.py", line 58, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "D:\projects\Datascienceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+  File "D:\projects\Datascienceproject\src\datascience\components\model_evaluation.py", line 62, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 466, in log_model
+    return Model.log(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\models\model.py", line 1357, in log
+    registered_model = mlflow.tracking._model_registry.fluent._register_model(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 229, in _register_model
+    create_version_response = client._create_model_version(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\client.py", line 4440, in _create_model_version
+    return self._get_registry_client().create_model_version(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\telemetry\track.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 268, in create_model_version
+    mv = self.store.create_model_version(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\rest_store.py", line 301, in create_model_version
+    response_proto = self._call_endpoint(CreateModelVersion, req_body)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 594, in call_endpoint
+    response = http_request(**call_kwargs)
+  File "D:\projects\Datascienceproject\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 259, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to https://dagshub.com/upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create failed with exception HTTPSConnectionPool(host='dagshub.com', port=443): Max retries exceeded with url: /upendranaidu333/Datascienceproject.mlflow/api/2.0/mlflow/model-versions/create (Caused by ResponseError('too many 500 error responses'))
